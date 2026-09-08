@@ -29,6 +29,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+def aaa() -> str: return 'aaaaa'
+
+
+
+def bbb() -> str: return 'bbbbb'
+
+
+def ccc() -> str: return 'ccccc'
+
 
 @app.get("/health", response_model=HealthResponse)
 def health() -> HealthResponse:
